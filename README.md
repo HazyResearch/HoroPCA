@@ -49,7 +49,7 @@ optional arguments:
 ```
 ### Examples
 
-1. Run HoroPCA on the smalltree dataset:
+#### 1. Run HoroPCA on the smalltree dataset:
 ```
 python main.py --dataset smalltree --model horopca --dim 10 --n-components 2
 ```
@@ -59,7 +59,7 @@ distortion: 	0.19 +- 0.00
 frechet_var: 	7.15 +- 0.00
 ```
 
-2. Run Euclidean PCA on the smalltree dataset:
+#### 2. Run Euclidean PCA on the smalltree dataset:
 ```
 python main.py --dataset smalltree --model pca --dim 10 --n-components 2
 ```
@@ -72,7 +72,7 @@ frechet_var:    0.34 +- 0.00
 
 ### Datasets
 The possible dataset choices  in this repo are `{smalltree,phylo-tree,bio-diseasome,ca-CSphd}`.
-To add a new dataset, add the corresponding edge list and embedding file in the data folder. 
+To add a new dataset, add the corresponding edge list and embedding file in the `data/` folder. 
 
 
 
