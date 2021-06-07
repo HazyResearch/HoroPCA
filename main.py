@@ -111,7 +111,7 @@ if __name__ == "__main__":
                 model.cuda()
             model.fit(x, iterative=model_params['iterative'], optim=model_params['optim'])
             metrics.append(model.compute_metrics(x))
-            embeddings = model.map_to_ball(x).detach().numpy()
+            embeddings = model.map_to_ball(x).detach().cpu().numpy()
         metrics = aggregate_metrics(metrics)
     else:
         # run hMDS baseline
