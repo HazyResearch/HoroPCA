@@ -5,7 +5,7 @@ This code is the official PyTorch implementation of the ICML 2021 paper:
 > **HoroPCA: Hyperbolic Dimensionality Reduction via Horospherical Projections**\
 > Ines Chami*, Albert Gu*, Dat Nguyen*, Christopher Ré\
 > Stanford University\
-> Paper: [TODO: add arxiv link]
+> Paper: [https://arxiv.org/abs/2106.03306]
 
 ![HoroPCA](pga_horopca.png "HoroPCA")
 
