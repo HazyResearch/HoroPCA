@@ -79,5 +79,10 @@ To add a new dataset, add the corresponding edge list and embedding file in the 
 ## Citation
 If you use this codebase, or otherwise found our work valuable, please cite:
 ```
-[TODO: add citation]
+@article{chami2021horopca,
+  title={HoroPCA: Hyperbolic Dimensionality Reduction via Horospherical Projections},
+  author={Chami, Ines and Gu, Albert and Nguyen, Dat and R{\'e}, Christopher},
+  journal={arXiv preprint arXiv:2106.03306},
+  year={2021}
+}
 ```
