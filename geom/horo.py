@@ -211,8 +211,8 @@ def horo_project_using_one_ideal(submanifold_ideals, x, custom_ideal_direction=N
     else:
         p = custom_ideal_direction
 
-    eucl_proj_coefs, _ = torch.solve(submanifold_ideals @ x.transpose(0, 1),
-                                     submanifold_ideals @ submanifold_ideals.transpose(0, 1))  # (sub_dim, batch_size)
+    eucl_proj_coefs = torch.linalg.solve(submanifold_ideals @ submanifold_ideals.transpose(0, 1),  # (sub_dim, batch_size)
+                                     submanifold_ideals @ x.transpose(0, 1))
     eucl_projs = eucl_proj_coefs.transpose(0, 1) @ submanifold_ideals  # (batch_size, dim)
 
     t = torch.sum((p - x) * (p - x), dim=-1) / (

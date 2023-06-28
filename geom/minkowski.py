@@ -74,8 +74,8 @@ def orthogonal_projection(basis, x, bilinear_form=None):
     Warning: Will not work if the linear subspace spanned by basis is tangent to the light cone.
              (In that case, the orthogonal projection is not unique)
     """
-    coefs, _ = torch.solve(pairwise_bilinear_pairing(basis, x, bilinear_form),
-                           pairwise_bilinear_pairing(basis, basis, bilinear_form))
+    coefs = torch.linalg.solve(pairwise_bilinear_pairing(basis, basis, bilinear_form), 
+                               pairwise_bilinear_pairing(basis, x, bilinear_form))
 
     return coefs.transpose(-1, -2) @ basis
 
